@@ -1,0 +1,241 @@
+/* Base Styles & Variables */
+:root {
+  --primary: #4a148c;
+  --primary-light: #7b1fa2;
+  --secondary: #e1bee7;
+  --accent: #ffab00;
+  --success: #4cc9f0;
+  --danger: #ef233c;
+  --text: #2b2d42;
+  --gray: #8d99ae;
+  --light: #f8f9fa;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.05);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* Apply gradient to a full-width wrapper */
+.gradient-wrapper {
+  width: 100%;
+  background: linear-gradient(to right, #d2cfd7, #a87557);
+  padding: 1rem 0; /* Adjust vertical padding as needed */
+}
+/* Component Styles */
+.border-wrapper {
+  position: relative;
+  padding: 3px;
+  border-radius: 15px;
+     background: linear-gradient(to right, #3606e7, #f10606);
+
+  background-size: 200% 200%;
+  animation: gradientBG 8s ease infinite;
+  box-shadow: var(--shadow-lg);
+  margin: 20px auto;
+  max-width: 1200px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards, gradientBG 8s ease infinite 0.8s;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.welcome-container {
+  padding: 2rem 1rem;
+      background: linear-gradient(to right, #e5ddee, #ede2dc);
+
+}
+
+/* Card Content Styling */
+.card.shadow-lg {
+  border: none;
+  border-radius: 10px;
+     background: linear-gradient(to right, #99d5ab, #b2e1d6);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Stagger animations for cards */
+.row.align-items-stretch .col-md-6:nth-child(1) .card {
+  animation-delay: 0.2s;
+}
+
+.row.align-items-stretch .col-md-6:nth-child(2) .card {
+  animation-delay: 0.4s;
+}
+
+.card.shadow-lg:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+/* Text Styling */
+h2.text-primary, h2.text-success {
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+h2.text-primary:after, h2.text-success:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.card:hover h2.text-primary:after,
+.card:hover h2.text-success:after {
+  width: 100px;
+}
+
+/* List Item Animations */
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Stagger list items */
+.card.shadow-lg ul li:nth-child(1) { animation-delay: 0.5s; }
+.card.shadow-lg ul li:nth-child(2) { animation-delay: 0.6s; }
+.card.shadow-lg ul li:nth-child(3) { animation-delay: 0.7s; }
+.card.shadow-lg ul li:nth-child(4) { animation-delay: 0.8s; }
+.card.shadow-lg ul li:nth-child(5) { animation-delay: 0.9s; }
+.card.shadow-lg ul li:nth-child(6) { animation-delay: 1.0s; }
+
+li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: currentColor;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+.card:hover li:before {
+  transform: scale(1);
+}
+
+.card:hover li {
+  padding-left: 1.8rem;
+}
+
+/* Footer Animation */
+.footer {
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 1.1s;
+}
+
+.footer:hover {
+  background: white;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .border-wrapper {
+    margin: 10px;
+  }
+  
+  .welcome-container {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  
+  .col-md-6 {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  h2 {
+    font-size: 1.7rem !important;
+  }
+  
+  p, li {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .border-wrapper {
+    margin: 5px;
+    padding: 2px;
+  }
+  
+  .card.shadow-lg {
+    padding: 1.5rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .footer {
+    padding: 1rem !important;
+    font-size: 0.9rem;
+  }
+  
+  /* Adjust animation delays for mobile */
+  .row.align-items-stretch .col-md-6:nth-child(1) .card,
+  .row.align-items-stretch .col-md-6:nth-child(2) .card {
+    animation-delay: 0.2s;
+  }
+  
+  .card.shadow-lg ul li {
+    animation-delay: 0.3s !important;
+  }
+  
+  .footer {
+    animation-delay: 0.4s;
+  }
+}

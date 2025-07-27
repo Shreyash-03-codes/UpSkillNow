@@ -1,0 +1,223 @@
+
+
+<div class="gradient-wrapper">
+
+    <!-- Your content here -->
+     <div class="topics-container">
+  <header class="page-header">
+    <div class="header-content">
+      <h1 class="main-title">
+        <i class="fas fa-robot"></i> AI/ML Learning Path
+      </h1>
+      <p class="subtitle">
+        Master Artificial Intelligence and Machine Learning concepts with this structured learning path
+      </p>
+    </div>
+  </header>
+
+  <!-- AI/ML Fundamentals Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon ai-icon">
+        <i class="fas fa-brain"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">AI/ML Fundamentals</span>
+        <span class="topic-count">5 topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:0:5" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+
+  <!-- Mathematics for ML Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon math-icon">
+        <i class="fas fa-square-root-alt"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Mathematics for ML</span>
+        <span class="topic-count">4 topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:5:9" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+
+  <!-- Data Handling Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon data-icon">
+        <i class="fas fa-database"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Data Handling</span>
+        <span class="topic-count">4 topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:9:13" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+
+  <!-- Core ML Algorithms Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon algorithm-icon">
+        <i class="fas fa-project-diagram"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Core ML Algorithms</span>
+        <span class="topic-count">7 topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:13:20" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+
+  <!-- Model Evaluation Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon eval-icon">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Model Evaluation & Tuning</span>
+        <span class="topic-count">4 topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:20:24" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+
+  <!-- Deep Learning Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon dl-icon">
+        <i class="fas fa-network-wired"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Deep Learning</span>
+        <span class="topic-count">5 topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:24:29" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+
+  <!-- Tools and Libraries Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon tools-icon">
+        <i class="fas fa-tools"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Tools and Libraries</span>
+        <span class="topic-count">6 topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:29:35" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+
+  <!-- Real-World Applications Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon apps-icon">
+        <i class="fas fa-laptop-code"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Real-World Applications</span>
+        <span class="topic-count">4 topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:35:39" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+
+  <!-- Advanced Topics Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon advanced-icon">
+        <i class="fas fa-rocket"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Advanced Topics</span>
+        <span class="topic-count">4 topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:39:43" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">AI/ML Learning Path</div>
+    <div class="footer-icons">
+      <i class="fab fa-github"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
+    <div class="footer-copyright">
+      © 2023 All rights reserved. Keep Learning!
+    </div>
+  </div>
+</footer>

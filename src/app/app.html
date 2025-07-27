@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-light nav-bg shadow-sm">
+  <div class="container-fluid">
+<a class="navbar-brand fw-bold d-flex align-items-center" routerLink="/">
+  <span style="font-size: 1.5rem; font-weight: 800; color: #ed621d;">Up</span>
+  <span style="font-size: 1.5rem; font-weight: 800; color: #f3f4e4;">Sk</span>
+  <span style="font-size: 1.5rem; font-weight: 800; color: #181fef;">i</span>
+  <span style="font-size: 1.5rem; font-weight: 800; color: #f3f4e4;">ll</span>
+  <span style="font-size: 1.5rem; font-weight: 800; color: #1e910a;">Now</span>
+</a>
+
+
+    <!-- Toggler Button (for mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Left-side nav links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" *ngIf="userLoggedIn">
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+
+        <li class="nav-item dropdown" *ngIf="userLoggedIn">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Courses
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="userDropdown">
+            <li><a class="dropdown-item" routerLink="/java">Java & Spring</a></li>
+            <li><a class="dropdown-item" routerLink="/dsa">DSA</a></li>
+            <li><a class="dropdown-item" routerLink="/webdevelopment">Web Development</a></li>
+            <li><a class="dropdown-item" routerLink="/systemdesign">System Design</a></li>
+            <li><a class="dropdown-item" routerLink="/devops">Devops</a></li>
+            <li><a class="dropdown-item" routerLink="/aiml">AI/ML</a></li>
+
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contactus">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Right-side: Auth or User Info -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Auth Button -->
+        <li class="nav-item" *ngIf="!userLoggedIn">
+          <a class="btn btn-outline-primary" routerLink="/authenticate">Authenticate</a>
+        </li>
+
+        <!-- Profile Dropdown -->
+        <li class="nav-item dropdown" *ngIf="userLoggedIn">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+            id="userProfileDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img [src]="userProfilePhoto" alt="Profile" class="rounded-circle"
+              width="35" height="35" style="object-fit: cover; margin-right: 10px;">
+            <span class="fw-bold text-dark">{{ userName }}</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
+            <li><a class="dropdown-item" routerLink="/profile">View Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" (click)="logout()">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Routing -->
+<router-outlet></router-outlet>

@@ -1,0 +1,45 @@
+<div class="topic-card" [class.completed]="isCompleted">
+  <!-- Card Header -->
+  <div class="card-header">
+    <h3 class="topic-title">
+      <i class="fas fa-bookmark" [style.color]="isCompleted ? '#4cc9f0' : '#8d99ae'"></i>
+      {{ topicName }}
+    </h3>
+    <span class="status-badge" [class.completed]="isCompleted">
+      {{ isCompleted ? 'Completed' : 'In Progress' }}
+    </span>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="action-buttons">
+    <label class="completion-toggle">
+      <input type="checkbox" [(ngModel)]="isCompleted" class="toggle-input">
+      <span class="toggle-slider"></span>
+      <span class="toggle-label">{{ isCompleted ? 'Done' : 'Mark Complete' }}</span>
+    </label>
+
+    <div class="button-group">
+      <button class="action-btn youtube-btn" (click)="openYouTube()">
+        <i class="fab fa-youtube"></i>
+        <span>Watch</span>
+      </button>
+      <button class="action-btn notes-btn" (click)="toggleNotes()">
+        <i class="fas" [class.fa-edit]="!showNotes" [class.fa-times]="showNotes"></i>
+        <span>{{ showNotes ? 'Close' : 'Notes' }}</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Notes Section -->
+  <div class="notes-section" *ngIf="showNotes">
+    <div class="notes-header">
+      <i class="fas fa-pencil-alt"></i>
+      <h4>My Notes</h4>
+    </div>
+    <textarea 
+      [(ngModel)]="notes"
+      class="notes-textarea"
+      placeholder="Write your thoughts, code snippets, or key takeaways here..."
+    ></textarea>
+  </div>
+</div>

@@ -1,0 +1,237 @@
+:root {
+  --primary: #4a148c;
+  --primary-light: #7b1fa2;
+  --secondary: #e1bee7;
+  --accent: #ffab00;
+  --success: #4cc9f0;
+  --danger: #ef233c;
+  --text: #2b2d42;
+  --gray: #8d99ae;
+  --light: #f8f9fa;
+}
+
+.topic-card {
+    background: linear-gradient(to right, #bcb4c5, #bee5ba);
+
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary);
+  overflow: hidden;
+  color: white;
+}
+
+.topic-card.completed {
+  border-left-color: var(--success);
+  background-color: rgba(76, 201, 240, 0.03);
+}
+
+.topic-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Header Styles */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.topic-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.topic-title i {
+  font-size: 1.1rem;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  background: rgba(74, 20, 140, 0.1);
+  color: var(--primary);
+}
+
+.status-badge.completed {
+  background: rgba(76, 201, 240, 0.1);
+  color: var(--success);
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.completion-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.toggle-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+  background-color: #e9ecef;
+  border-radius: 34px;
+  transition: all 0.3s ease;
+}
+
+.toggle-slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.toggle-input:checked + .toggle-slider {
+  background-color: var(--success);
+}
+
+.toggle-input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+.toggle-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.button-group {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.youtube-btn {
+  background: #ff0000;
+  color: white;
+}
+
+.youtube-btn:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+}
+
+.notes-btn {
+  background: var(--primary);
+  color: white;
+}
+
+.notes-btn:hover {
+  background: var(--primary-light);
+}
+
+/* Notes Section */
+.notes-section {
+  margin-top: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.notes-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.notes-header i {
+  color: var(--primary);
+}
+
+.notes-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.notes-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.notes-textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(74, 20, 140, 0.1);
+  background: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .action-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .button-group {
+    width: 100%;
+  }
+  
+  .action-btn {
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .topic-title {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,273 @@
+/* === Root Theme === */
+:root {
+  --primary: #7b1fa2;
+  --accent: #ff6f00;
+  --glass: rgba(255, 255, 255, 0.15);
+  --text-dark: #222;
+  --text-light: #fff;
+  --bg: linear-gradient(to right, #8e2de2, #4a00e0);
+  --radius: 20px;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  --transition: all 0.4s ease;
+}
+
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* === Hero Section === */
+.hero-section {
+  text-align: center;
+  color: var(--text-light);
+  padding: 4rem 1rem;
+  background: linear-gradient(to right, #c2a2e7, #dbb8a4);
+  animation: fadeInDown 1s ease-in-out;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  animation: zoomIn 1s ease-in-out;
+}
+.hero-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* === Learning Paths Grid === */
+.learning-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+  background: linear-gradient(to right, #c2a2e7, #dbb8a4);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* === Card === */
+.path-card {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: #fff;
+  padding: 1.5rem;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+.path-card:hover {
+  transform: translateY(-12px) scale(1.025);
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.3);
+}
+.path-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 70%);
+  transform: rotate(45deg);
+  animation: shine 5s linear infinite;
+  z-index: 0;
+}
+.path-card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* === Card Header === */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.card-header h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.card-header h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  animation: slideInLine 3s ease-in-out infinite;
+}
+.card-icon {
+  font-size: 2rem;
+  color: var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* === Card Body === */
+.card-body p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+.topics-container h4 {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+.topics-list {
+  list-style: none;
+}
+.topics-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  animation: fadeInUp 1.4s ease-in-out;
+}
+.topics-list li:hover {
+  transform: translateX(8px) scale(1.02);
+  color: var(--accent);
+}
+.topics-list li i {
+  color: #4caf50;
+}
+
+/* === Footer === */
+.footer {
+  background: rgba(0, 0, 0, 0.2);
+  color: #eee;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 1.5rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* === Duration Badge === */
+.duration-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  animation: bounce 2.5s infinite ease-in-out;
+}
+.duration-badge i {
+  margin-right: 0.3rem;
+}
+
+/* === Card Colors === */
+.java-card {
+  background: linear-gradient(145deg, #4a148c 10%, #880e4f 90%);
+}
+.dsa-card {
+  background: linear-gradient(145deg, #0d47a1, #1976d2);
+}
+.web-card {
+  background: linear-gradient(145deg, #00695c, #26a69a);
+}
+.system-card {
+  background: linear-gradient(145deg, #37474f, #607d8b);
+}
+.devops-card {
+  background: linear-gradient(145deg, #ff6f00, #ff8f00);
+}
+.ai-card {
+  background: linear-gradient(145deg, #311b92, #512da8);
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+}
+@keyframes slideInLine {
+  0% { left: -100%; }
+  50% { left: 0%; }
+  100% { left: 100%; }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@keyframes shine {
+  0% { transform: rotate(0deg) translateX(-50%) translateY(-50%); }
+  100% { transform: rotate(360deg) translateX(-50%) translateY(-50%); }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .learning-paths-grid {
+    padding: 2rem 1rem;
+  }
+}

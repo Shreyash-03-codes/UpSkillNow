@@ -1,0 +1,63 @@
+<div class="profile-container">
+  <div class="profile-card">
+    <!-- Profile Header with Gradient Background -->
+    <div class="profile-header">
+      <h2>Your Profile</h2>
+      <p>Welcome back to your learning journey</p>
+    </div>
+
+    <!-- Profile Content -->
+    <div class="profile-content">
+      <!-- Avatar Section -->
+      <div class="avatar-section">
+        <img [src]="userData.picture" alt="Profile picture" class="profile-avatar">
+        <div class="verification-badge" *ngIf="userData.email_verified">
+          <i class="fas fa-check-circle"></i> Verified
+        </div>
+      </div>
+
+      <!-- User Info -->
+      <div class="user-info">
+        <h3 class="user-name">{{ userData.name }}</h3>
+        <p class="user-email">
+          <i class="fas fa-envelope"></i> {{ userData.email }}
+        </p>
+        
+        <div class="user-meta">
+          <span class="meta-item">
+            <i class="fas fa-user"></i> {{ userData.given_name }} {{ userData.family_name }}
+          </span>
+          <span class="meta-item">
+            <i class="fas fa-shield-alt"></i> Secure Account
+          </span>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="stats-section">
+        <div class="stat-card">
+          <div class="stat-value">42</div>
+          <div class="stat-label">Courses Taken</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">87%</div>
+          <div class="stat-label">Completion</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">5</div>
+          <div class="stat-label">Certificates</div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button class="btn btn-edit">
+          <i class="fas fa-edit"></i> Edit Profile
+        </button>
+        <button class="btn btn-settings">
+          <i class="fas fa-cog"></i> Settings
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

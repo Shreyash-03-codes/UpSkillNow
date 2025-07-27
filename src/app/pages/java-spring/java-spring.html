@@ -1,0 +1,94 @@
+<div class="gradient-wrapper">
+  <div class="topics-container">
+    <div class="topics-container">
+  <header class="page-header">
+    <div class="header-content">
+      <h1 class="main-title">
+        <i class="fab fa-java"></i> Java & Spring Framework Mastery
+      </h1>
+      <p class="subtitle">
+        Master Core Java, Spring Framework, and Spring Boot with this comprehensive learning path
+      </p>
+    </div>
+  </header>
+
+  <!-- Core Java Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon java-icon">
+        <i class="fab fa-java"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Core Java</span>
+        <span class="topic-count">{{topicsList.slice(0, 29).length}} topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:0:29" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+
+  <!-- Spring Framework Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon spring-icon">
+        <i class="fas fa-leaf"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Spring Framework</span>
+        <span class="topic-count">{{topicsList.slice(29, 45).length}} topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:29:45" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+
+  <!-- Spring Boot Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon boot-icon">
+        <i class="fas fa-bolt"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Spring Boot</span>
+        <span class="topic-count">{{topicsList.slice(45, topicsList.length).length}} topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:45:topicsList.length" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+</div>
+
+    </div>
+    </div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">Java & Spring Mastery</div>
+    <div class="footer-icons">
+      <i class="fab fa-github"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
+    <div class="footer-copyright">
+      © 2023 All rights reserved. Happy Coding!
+    </div>
+  </div>
+</footer>

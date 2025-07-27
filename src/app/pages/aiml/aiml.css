@@ -1,0 +1,310 @@
+:root {
+  --primary: #4a148c;
+  --primary-light: #7b1fa2;
+  --secondary: #e1bee7;
+  --accent: #ffab00;
+  --success: #4cc9f0;
+  --danger: #ef233c;
+  --text: #2b2d42;
+  --gray: #8d99ae;
+  --light: #f8f9fa;
+  --devops-color: #2c3e50;
+  --text-dark: #2c3e50;
+  --text-light: #7f8c8d;
+  --background-light: #f4f4f4;
+}
+
+/* Apply gradient to a full-width wrapper */
+.gradient-wrapper {
+  width: 100%;
+  background: linear-gradient(to right, #d0c2e0, #793e1c);
+  padding: 1rem 0; /* Adjust vertical padding as needed */
+}
+
+/* Then keep your centered content container */
+.topics-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  overflow-x: hidden;
+  background: white; /* or transparent if you want the gradient to show through */
+  border-radius: 12px; /* Optional */
+    background: linear-gradient(to right, #c2a2e7, #dbb8a4);
+
+}
+
+/* Section wrapper */
+.topic-section {
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* On hover, lift slightly */
+.topic-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Header layout */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.section-icon {
+  background-color: var(--primary);
+  color: white;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  font-size: 1.4rem;
+}
+
+/* Section specific icon styles */
+.ai-icon {
+  background-color: #3a1c71;
+}
+
+.math-icon {
+  background-color: #d76d77;
+}
+
+.data-icon {
+  background-color: #ffaf7b;
+}
+
+.algorithm-icon {
+  background-color: #4cc9f0;
+}
+
+.eval-icon {
+  background-color: #4361ee;
+}
+
+.dl-icon {
+  background-color: #7209b7;
+}
+
+.tools-icon {
+  background-color: #f72585;
+}
+
+.apps-icon {
+  background-color: #4895ef;
+}
+
+.advanced-icon {
+  background-color: #560bad;
+}
+
+/* Section title block */
+.section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.section-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+.topic-count {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+/* Grid for cards */
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Header style */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+  color: white;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.main-title i {
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #f3e5f5;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Footer Styles */
+.footer {
+  background: linear-gradient(135deg, #3a1c71, #d76d77);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-icons i {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons i:hover {
+  transform: translateY(-3px);
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 1024px) {
+  .topics-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .section-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    align-items: flex-start;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .topics-container {
+    padding: 1rem;
+  }
+
+  .page-header {
+    padding: 2rem 1rem 1.5rem;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .topic-section {
+    padding: 1rem;
+  }
+
+  .section-name {
+    font-size: 1.2rem;
+  }
+
+  .topic-count {
+    font-size: 0.85rem;
+  }
+
+  .footer-content {
+    padding: 0 1rem;
+  }
+
+  .footer-icons {
+    font-size: 1.2rem;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+}

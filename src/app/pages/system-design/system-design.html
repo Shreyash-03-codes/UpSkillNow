@@ -1,0 +1,70 @@
+<div class="gradient-wrapper">
+<div class="topics-container">
+  <header class="page-header">
+    <div class="header-content">
+      <h1 class="main-title">
+        <i class="fas fa-project-diagram"></i> System Design Mastery
+      </h1>
+      <p class="subtitle">
+        Master High-Level and Low-Level System Design concepts with this comprehensive learning path
+      </p>
+    </div>
+  </header>
+
+  <!-- High-Level Design Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon hld-icon">
+        <i class="fas fa-sitemap"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">High-Level Design (HLD)</span>
+        <span class="topic-count">{{topicsList.slice(0, 18).length}} topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:0:18" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+
+  <!-- Low-Level Design Section -->
+  <div class="topic-section">
+    <div class="section-header">
+      <div class="section-icon lld-icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <h2 class="section-title">
+        <span class="section-name">Low-Level Design (LLD)</span>
+        <span class="topic-count">{{topicsList.slice(18, topicsList.length).length}} topics</span>
+      </h2>
+    </div>
+    <div class="topics-grid">
+      <app-topic-card *ngFor="let topic of topicsList | slice:18:topicsList.length" 
+        [topicName]="topic.topicName" 
+        [ytLink]="topic.ytLink"
+        [isCompleted]="topic.isCompleted"
+        (toggleComplete)="toggleCompletion(topic)">
+      </app-topic-card>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">System Design Mastery</div>
+    <div class="footer-icons">
+      <i class="fab fa-github"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
+    <div class="footer-copyright">
+      © 2023 All rights reserved. Happy Designing!
+    </div>
+  </div>
+</footer>
