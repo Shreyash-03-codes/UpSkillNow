@@ -15,57 +15,33 @@ export class WebDevelopment {
 
   topicsList: Topic[] = [
     // HTML & CSS Basics
-    { topicName: 'HTML Syntax and Structure', ytLink: '', isCompleted: false },
-    { topicName: 'HTML Forms and Inputs', ytLink: '', isCompleted: false },
-    { topicName: 'Semantic HTML', ytLink: '', isCompleted: false },
-    { topicName: 'CSS Syntax and Selectors', ytLink: '', isCompleted: false },
-    { topicName: 'Box Model and Positioning', ytLink: '', isCompleted: false },
-    { topicName: 'Flexbox and Grid', ytLink: '', isCompleted: false },
-    { topicName: 'Responsive Design & Media Queries', ytLink: '', isCompleted: false },
-    { topicName: 'CSS Animations and Transitions', ytLink: '', isCompleted: false },
-    { topicName: 'Bootstrap / Tailwind Basics', ytLink: '', isCompleted: false },
+    { topicName: 'HTML one Shot', ytLink: 'https://youtu.be/k7ELO356Npo?si=34HbY4BUnZmkVWJ1', isCompleted: false },
+    { topicName: 'CSS one Shot', ytLink: 'https://youtu.be/dSJM4Gyh8jE?si=elVWUfbP0x5ZXen8', isCompleted: false },
+    { topicName: 'Bootstrap one Shot', ytLink: 'https://youtu.be/fB00t4At0rk?si=KXbtElh9tGXG7R3u', isCompleted: false },
+    { topicName: 'Tailwind CSS one Shot', ytLink: 'https://youtu.be/Sae1MD5E5p8?si=g-MLq-RnD6yKszO8', isCompleted: false },
+
 
     // JavaScript Fundamentals
-    { topicName: 'JavaScript Basics (var, let, const)', ytLink: '', isCompleted: false },
-    { topicName: 'Data Types and Operators', ytLink: '', isCompleted: false },
-    { topicName: 'Functions and Scope', ytLink: '', isCompleted: false },
-    { topicName: 'DOM Manipulation', ytLink: '', isCompleted: false },
-    { topicName: 'Event Handling', ytLink: '', isCompleted: false },
-    { topicName: 'ES6 Features (Arrow Functions, Destructuring)', ytLink: '', isCompleted: false },
-    { topicName: 'Promises and Async/Await', ytLink: '', isCompleted: false },
-    { topicName: 'LocalStorage and SessionStorage', ytLink: '', isCompleted: false },
+    { topicName: 'JavaScript One Shot', ytLink: 'https://youtu.be/rfObCuGLSek?si=qop8JRiYfYWfykaa', isCompleted: false },
+    { topicName: 'ReactJs One Shot', ytLink: 'https://youtu.be/eILUmCJhl64?si=s-xiAP4VJUJhM8aM', isCompleted: false },
+    { topicName: 'Angular One Shot', ytLink: 'https://youtu.be/jYV2enNmplM?si=3av8e-EC_sqgIhnr', isCompleted: false },
 
-    // Frontend Frameworks
-    { topicName: 'Introduction to React', ytLink: '', isCompleted: false },
-    { topicName: 'JSX and Components', ytLink: '', isCompleted: false },
-    { topicName: 'State and Props', ytLink: '', isCompleted: false },
-    { topicName: 'React Hooks (useState, useEffect)', ytLink: '', isCompleted: false },
-    { topicName: 'React Router', ytLink: '', isCompleted: false },
-    { topicName: 'Angular Basics', ytLink: '', isCompleted: false },
-    { topicName: 'Vue.js Basics', ytLink: '', isCompleted: false },
 
     // Backend Development
-    { topicName: 'HTTP and REST APIs', ytLink: '', isCompleted: false },
-    { topicName: 'Node.js Basics', ytLink: '', isCompleted: false },
-    { topicName: 'Express.js Framework', ytLink: '', isCompleted: false },
-    { topicName: 'CRUD APIs in Express', ytLink: '', isCompleted: false },
-    { topicName: 'Authentication (JWT)', ytLink: '', isCompleted: false },
-    { topicName: 'File Upload and Middleware', ytLink: '', isCompleted: false },
+  
+    { topicName: 'Node.js & ExpressJs One Shot', ytLink: 'https://youtu.be/Oe421EPjeBE?si=xM4SNl27XSLzgpGW', isCompleted: false },
+
 
     // Database
-    { topicName: 'Introduction to Databases', ytLink: '', isCompleted: false },
-    { topicName: 'MySQL / PostgreSQL Basics', ytLink: '', isCompleted: false },
-    { topicName: 'MongoDB Basics', ytLink: '', isCompleted: false },
-    { topicName: 'ORMs (Mongoose / Sequelize)', ytLink: '', isCompleted: false },
+    { topicName: 'MySQL / PostgreSQL Basics', ytLink: 'https://youtu.be/hlGoQC332VM?si=3-tljlqwLufdFVTb', isCompleted: false },
+    { topicName: 'MongoDB ', ytLink: 'https://youtu.be/J6mDkcqU_ZE?si=GHLL9Ve667Z3OBDH', isCompleted: false },
+    { topicName: 'ORMs (Mongoose)', ytLink: 'https://youtu.be/xdbm7n9dWHM?si=4p0QWsVny9fa4ogK', isCompleted: false },
 
-    // Full Stack & DevOps Basics
-    { topicName: 'Connecting Frontend to Backend', ytLink: '', isCompleted: false },
-    { topicName: 'CORS and Proxy', ytLink: '', isCompleted: false },
-    { topicName: 'Environment Variables', ytLink: '', isCompleted: false },
-    { topicName: 'Build Tools (Webpack, Vite)', ytLink: '', isCompleted: false },
-    { topicName: 'Hosting on Netlify / Vercel / Render', ytLink: '', isCompleted: false },
-    { topicName: 'Docker Basics for Web Apps', ytLink: '', isCompleted: false },
-    { topicName: 'CI/CD Pipeline Overview', ytLink: '', isCompleted: false }
+
+    { topicName: 'Build Tools (Vite)', ytLink: 'https://youtu.be/do62-z3z6FM?si=MM5vOZ1900elOumu', isCompleted: false },
+    { topicName: 'Hosting on Vercel', ytLink: 'https://youtu.be/VigFI4TuwzI?si=JTkwbNNb2ezH6sGm', isCompleted: false },
+    { topicName: 'Docker Basics for Web Apps', ytLink: 'https://youtu.be/17Bl31rlnRM?si=xdGFrX5u87SMXJY3', isCompleted: false },
+    { topicName: 'CI/CD Pipeline Overview', ytLink: 'https://youtu.be/y4RcDlfYKB8?si=KcnIWycisogvstdj', isCompleted: false }
   ];
 
   toggleCompletion(topic: Topic) {

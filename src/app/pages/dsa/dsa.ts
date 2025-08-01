@@ -18,14 +18,16 @@ interface Topic {
 export class Dsa {
   topicsList: Topic[] = [
     // Basics
-    { topicName: 'Introduction to DSA', ytLink: 'https://codeforces.com', isCompleted: false },
-    { topicName: 'Time and Space Complexity', ytLink: '', isCompleted: false },
-    { topicName: 'Big O Notation', ytLink: '', isCompleted: false },
+    { topicName: 'Introduction to DSA', ytLink: 'https://youtu.be/cOSTc6qBRQw?si=P7AzOoJHXIB2bDi8', isCompleted: false },
+    { topicName: 'Time and Space Complexity', ytLink: 'https://youtu.be/PwKv8fOcriM?si=Juz6-TS1-ZFMHbU_', isCompleted: false },
+
 
     // Arrays & Strings
-    { topicName: 'Arrays Basics & Implementation', ytLink: '', isCompleted: false },
-    { topicName: 'Searching Algorithms (Linear, Binary)', ytLink: '', isCompleted: false },
-    { topicName: 'Sorting Algorithms (Bubble, Selection, Insertion)', ytLink: '', isCompleted: false },
+    { topicName: 'Arrays Basics & Implementation', ytLink: 'https://youtu.be/8wmn7k1TTcI?si=UTRczzUQ24qlMC-o', isCompleted: false },
+    { topicName: 'Linear Search Algorithm', ytLink: 'https://youtu.be/_HRA37X8N_Q?si=OvEgFLECWYYaPgJ8', isCompleted: false },
+       { topicName: 'Binary Search Algorithm', ytLink: 'https://youtu.be/f6UU7V3szVw?si=lR1gpbCU2Zinjwpn', isCompleted: false },
+
+    { topicName: 'Sorting Algorithms (Bubble, Selection, Insertion)', ytLink: 'https://youtu.be/f6UU7V3szVw?si=lR1gpbCU2Zinjwpn', isCompleted: false },
     { topicName: 'Advanced Sorting (Merge, Quick, Heap Sort)', ytLink: '', isCompleted: false },
     { topicName: 'Two Pointer Technique', ytLink: '', isCompleted: false },
     { topicName: 'Sliding Window Technique', ytLink: '', isCompleted: false },

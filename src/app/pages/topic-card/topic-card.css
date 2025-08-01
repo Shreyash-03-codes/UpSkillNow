@@ -1,31 +1,47 @@
 :root {
   --primary: #4a148c;
   --primary-light: #7b1fa2;
+  --primary-lightest: #e6cef3;
   --secondary: #e1bee7;
   --accent: #ffab00;
+  --accent-light: #ffd166;
   --success: #4cc9f0;
+  --success-dark: #2a9dbb;
   --danger: #ef233c;
+  --danger-light: #f8a5a5;
   --text: #2b2d42;
+  --text-light: #6c757d;
   --gray: #8d99ae;
+  --gray-light: #e9ecef;
   --light: #f8f9fa;
+  --green: #40e71f;
+  --green-dark: #2eb315;
+  --progress-track: #e9ecef;
+  --progress-fill: #4a148c;
+  --check-completed: #40e71f;
+  --check-incomplete: #ced4da;
 }
 
 .topic-card {
-    background: linear-gradient(to right, #bcb4c5, #bee5ba);
-
+  background: linear-gradient(to right, #bcb4c5, #bee5ba);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   transition: all 0.3s ease;
   border-left: 4px solid var(--primary);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   overflow: hidden;
-  color: white;
+  word-wrap: break-word;
 }
 
 .topic-card.completed {
   border-left-color: var(--success);
-  background-color: rgba(76, 201, 240, 0.03);
+  background: linear-gradient(to right, #d1f5ff, #e1f7e7);
 }
 
 .topic-card:hover {
@@ -36,8 +52,10 @@
 /* Header Styles */
 .card-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
   margin-bottom: 1.2rem;
 }
 
@@ -49,10 +67,13 @@
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  flex: 1 1 auto;
+  word-break: break-word;
 }
 
 .topic-title i {
   font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 .status-badge {
@@ -62,11 +83,17 @@
   border-radius: 50px;
   background: rgba(74, 20, 140, 0.1);
   color: var(--primary);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+  flex-shrink: 0;
 }
 
 .status-badge.completed {
-  background: rgba(76, 201, 240, 0.1);
-  color: var(--success);
+  background: rgba(64, 231, 31, 0.15);
+  color: var(--green-dark);
 }
 
 /* Action Buttons */
@@ -84,6 +111,7 @@
   align-items: center;
   gap: 0.8rem;
   cursor: pointer;
+  user-select: none;
 }
 
 .toggle-input {
@@ -98,7 +126,7 @@
   display: inline-block;
   width: 42px;
   height: 22px;
-  background-color: #e9ecef;
+  background-color: var(--gray-light);
   border-radius: 34px;
   transition: all 0.3s ease;
 }
@@ -116,7 +144,7 @@
 }
 
 .toggle-input:checked + .toggle-slider {
-  background-color: var(--success);
+  background-color: var(--green);
 }
 
 .toggle-input:checked + .toggle-slider:before {
@@ -127,11 +155,18 @@
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.toggle-input:checked ~ .toggle-label {
+  color: var(--green-dark);
+  font-weight: 600;
 }
 
 .button-group {
   display: flex;
   gap: 0.8rem;
+  flex-wrap: wrap;
 }
 
 .action-btn {
@@ -158,12 +193,14 @@
 }
 
 .notes-btn {
-  background: var(--primary);
-  color: white;
+  background: var(--light);
+  color: var(--primary);
+  border: 1px solid var(--gray-light);
 }
 
 .notes-btn:hover {
-  background: var(--primary-light);
+  background: var(--primary-lightest);
+  border-color: var(--primary-light);
 }
 
 /* Notes Section */
@@ -193,13 +230,13 @@
   width: 100%;
   min-height: 100px;
   padding: 1rem;
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--gray-light);
   border-radius: 8px;
   font-family: inherit;
   font-size: 0.95rem;
   resize: vertical;
   transition: all 0.3s ease;
-  background: #f9f9f9;
+  background: var(--light);
 }
 
 .notes-textarea:focus {
@@ -216,21 +253,32 @@
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-  .action-buttons {
+@media (max-width: 768px) {
+  .card-header {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
+  .status-badge {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .button-group {
+    flex-direction: column;
     width: 100%;
   }
-  
+
   .action-btn {
-    flex: 1;
+    width: 100%;
     justify-content: center;
   }
-  
+
   .topic-title {
     font-size: 1.1rem;
   }

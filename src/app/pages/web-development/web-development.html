@@ -15,16 +15,14 @@
   <!-- HTML & CSS Basics Section -->
   <div class="topic-section">
     <div class="section-header">
-      <div class="section-icon html-icon">
-        <i class="fab fa-html5"></i>
-      </div>
+       <i class="fab fa-html5"></i>
       <h2 class="section-title">
         <span class="section-name">HTML & CSS Basics</span>
-        <span class="topic-count">{{topicsList.slice(0, 9).length}} topics</span>
+        <span class="topic-count">{{topicsList.slice(0, 4).length}} topics</span>
       </h2>
     </div>
     <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:0:9" 
+      <app-topic-card *ngFor="let topic of topicsList | slice:0:4" 
         [topicName]="topic.topicName" 
         [ytLink]="topic.ytLink"
         [isCompleted]="topic.isCompleted"
@@ -36,16 +34,14 @@
   <!-- JavaScript Fundamentals Section -->
   <div class="topic-section">
     <div class="section-header">
-      <div class="section-icon js-icon">
-        <i class="fab fa-js-square"></i>
-      </div>
+      <i class="fab fa-js-square"></i>
       <h2 class="section-title">
-        <span class="section-name">JavaScript Fundamentals</span>
-        <span class="topic-count">{{topicsList.slice(9, 17).length}} topics</span>
+        <span class="section-name">JavaScript Fundamentals and Frontend Frameworks</span>
+        <span class="topic-count">{{topicsList.slice(4, 7).length}} topics</span>
       </h2>
     </div>
     <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:9:17" 
+      <app-topic-card *ngFor="let topic of topicsList | slice:4:7" 
         [topicName]="topic.topicName" 
         [ytLink]="topic.ytLink"
         [isCompleted]="topic.isCompleted"
@@ -57,16 +53,14 @@
   <!-- Frontend Frameworks Section -->
   <div class="topic-section">
     <div class="section-header">
-      <div class="section-icon framework-icon">
-        <i class="fas fa-laptop-code"></i>
-      </div>
+       <i class="fas fa-laptop-code"></i>
       <h2 class="section-title">
-        <span class="section-name">Frontend Frameworks</span>
-        <span class="topic-count">{{topicsList.slice(17, 24).length}} topics</span>
+        <span class="section-name">Backend Development</span>
+        <span class="topic-count">{{topicsList.slice(7, 8).length}} topics</span>
       </h2>
     </div>
     <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:17:24" 
+      <app-topic-card *ngFor="let topic of topicsList | slice:7:8" 
         [topicName]="topic.topicName" 
         [ytLink]="topic.ytLink"
         [isCompleted]="topic.isCompleted"
@@ -75,40 +69,19 @@
     </div>
   </div>
 
-  <!-- Backend Development Section -->
-  <div class="topic-section">
-    <div class="section-header">
-      <div class="section-icon backend-icon">
-        <i class="fas fa-server"></i>
-      </div>
-      <h2 class="section-title">
-        <span class="section-name">Backend Development</span>
-        <span class="topic-count">{{topicsList.slice(24, 30).length}} topics</span>
-      </h2>
-    </div>
-    <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:24:30" 
-        [topicName]="topic.topicName" 
-        [ytLink]="topic.ytLink"
-        [isCompleted]="topic.isCompleted"
-        (toggleComplete)="toggleCompletion(topic)">
-      </app-topic-card>
-    </div>
-  </div>
+ 
 
   <!-- Database Section -->
   <div class="topic-section">
     <div class="section-header">
-      <div class="section-icon database-icon">
-        <i class="fas fa-database"></i>
-      </div>
+      <i class="fas fa-database"></i>
       <h2 class="section-title">
         <span class="section-name">Database</span>
-        <span class="topic-count">{{topicsList.slice(30, 34).length}} topics</span>
+        <span class="topic-count">{{topicsList.slice(8, 11).length}} topics</span>
       </h2>
     </div>
     <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:30:34" 
+      <app-topic-card *ngFor="let topic of topicsList | slice:8:11" 
         [topicName]="topic.topicName" 
         [ytLink]="topic.ytLink"
         [isCompleted]="topic.isCompleted"
@@ -120,16 +93,14 @@
   <!-- Full Stack & DevOps Basics Section -->
   <div class="topic-section">
     <div class="section-header">
-      <div class="section-icon devops-icon">
-        <i class="fas fa-network-wired"></i>
-      </div>
+    <i class="fas fa-network-wired"></i>
       <h2 class="section-title">
         <span class="section-name">Full Stack & DevOps Basics</span>
-        <span class="topic-count">{{topicsList.slice(34, topicsList.length).length}} topics</span>
+        <span class="topic-count">{{topicsList.slice(11, topicsList.length).length}} topics</span>
       </h2>
     </div>
     <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:34:topicsList.length" 
+      <app-topic-card *ngFor="let topic of topicsList | slice:11:topicsList.length" 
         [topicName]="topic.topicName" 
         [ytLink]="topic.ytLink"
         [isCompleted]="topic.isCompleted"

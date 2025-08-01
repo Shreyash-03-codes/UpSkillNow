@@ -15,16 +15,14 @@
   <!-- Core Java Section -->
   <div class="topic-section">
     <div class="section-header">
-      <div class="section-icon java-icon">
-        <i class="fab fa-java"></i>
-      </div>
+      <i class="fab fa-java"></i>
       <h2 class="section-title">
         <span class="section-name">Core Java</span>
-        <span class="topic-count">{{topicsList.slice(0, 29).length}} topics</span>
+        <span class="topic-count">{{topicsList.slice(0, 13).length}} topics</span>
       </h2>
     </div>
     <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:0:29" 
+      <app-topic-card *ngFor="let topic of topicsList | slice:0:13" 
         [topicName]="topic.topicName" 
         [ytLink]="topic.ytLink"
         [isCompleted]="topic.isCompleted"
@@ -36,16 +34,14 @@
   <!-- Spring Framework Section -->
   <div class="topic-section">
     <div class="section-header">
-      <div class="section-icon spring-icon">
-        <i class="fas fa-leaf"></i>
-      </div>
+      <i class="fas fa-leaf"></i>
       <h2 class="section-title">
         <span class="section-name">Spring Framework</span>
-        <span class="topic-count">{{topicsList.slice(29, 45).length}} topics</span>
+        <span class="topic-count">{{topicsList.slice(13, 26).length}} topics</span>
       </h2>
     </div>
     <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:29:45" 
+      <app-topic-card *ngFor="let topic of topicsList | slice:13:26" 
         [topicName]="topic.topicName" 
         [ytLink]="topic.ytLink"
         [isCompleted]="topic.isCompleted"
@@ -57,16 +53,14 @@
   <!-- Spring Boot Section -->
   <div class="topic-section">
     <div class="section-header">
-      <div class="section-icon boot-icon">
-        <i class="fas fa-bolt"></i>
-      </div>
+       <i class="fas fa-bolt"></i>
       <h2 class="section-title">
         <span class="section-name">Spring Boot</span>
-        <span class="topic-count">{{topicsList.slice(45, topicsList.length).length}} topics</span>
+        <span class="topic-count">{{topicsList.slice(26, topicsList.length).length}} topics</span>
       </h2>
     </div>
     <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:45:topicsList.length" 
+      <app-topic-card *ngFor="let topic of topicsList | slice:26:topicsList.length" 
         [topicName]="topic.topicName" 
         [ytLink]="topic.ytLink"
         [isCompleted]="topic.isCompleted"

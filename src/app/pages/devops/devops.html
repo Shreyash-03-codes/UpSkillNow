@@ -15,16 +15,14 @@
   <!-- DevOps Fundamentals Section -->
   <div class="topic-section">
     <div class="section-header">
-      <div class="section-icon fundamentals-icon">
-        <i class="fas fa-book"></i>
-      </div>
+    <i class="fas fa-server"></i>
       <h2 class="section-title">
         <span class="section-name">DevOps Fundamentals</span>
-        <span class="topic-count">{{topicsList.slice(0, 5).length}} topics</span>
+        <span class="topic-count">{{topicsList.slice(0, topicsList.length).length}} topics</span>
       </h2>
     </div>
     <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:0:5" 
+      <app-topic-card *ngFor="let topic of topicsList | slice:0:topicsList.length" 
         [topicName]="topic.topicName" 
         [ytLink]="topic.ytLink"
         [isCompleted]="topic.isCompleted"
@@ -33,156 +31,7 @@
     </div>
   </div>
 
-  <!-- Continuous Integration & Build Tools Section -->
-  <div class="topic-section">
-    <div class="section-header">
-      <div class="section-icon ci-icon">
-        <i class="fas fa-sync-alt"></i>
-      </div>
-      <h2 class="section-title">
-        <span class="section-name">Continuous Integration & Build Tools</span>
-        <span class="topic-count">{{topicsList.slice(5, 9).length}} topics</span>
-      </h2>
-    </div>
-    <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:5:9" 
-        [topicName]="topic.topicName" 
-        [ytLink]="topic.ytLink"
-        [isCompleted]="topic.isCompleted"
-        (toggleComplete)="toggleCompletion(topic)">
-      </app-topic-card>
-    </div>
-  </div>
-
-  <!-- Containerization with Docker Section -->
-  <div class="topic-section">
-    <div class="section-header">
-      <div class="section-icon docker-icon">
-        <i class="fab fa-docker"></i>
-      </div>
-      <h2 class="section-title">
-        <span class="section-name">Containerization with Docker</span>
-        <span class="topic-count">{{topicsList.slice(9, 13).length}} topics</span>
-      </h2>
-    </div>
-    <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:9:13" 
-        [topicName]="topic.topicName" 
-        [ytLink]="topic.ytLink"
-        [isCompleted]="topic.isCompleted"
-        (toggleComplete)="toggleCompletion(topic)">
-      </app-topic-card>
-    </div>
-  </div>
-
-  <!-- Container Orchestration with Kubernetes Section -->
-  <div class="topic-section">
-    <div class="section-header">
-      <div class="section-icon k8s-icon">
-        <i class="fas fa-ship"></i>
-      </div>
-      <h2 class="section-title">
-        <span class="section-name">Container Orchestration with Kubernetes</span>
-        <span class="topic-count">{{topicsList.slice(13, 18).length}} topics</span>
-      </h2>
-    </div>
-    <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:13:18" 
-        [topicName]="topic.topicName" 
-        [ytLink]="topic.ytLink"
-        [isCompleted]="topic.isCompleted"
-        (toggleComplete)="toggleCompletion(topic)">
-      </app-topic-card>
-    </div>
-  </div>
-
-  <!-- Infrastructure as Code (IaC) Section -->
-  <div class="topic-section">
-    <div class="section-header">
-      <div class="section-icon iac-icon">
-        <i class="fas fa-code"></i>
-      </div>
-      <h2 class="section-title">
-        <span class="section-name">Infrastructure as Code (IaC)</span>
-        <span class="topic-count">{{topicsList.slice(18, 22).length}} topics</span>
-      </h2>
-    </div>
-    <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:18:22" 
-        [topicName]="topic.topicName" 
-        [ytLink]="topic.ytLink"
-        [isCompleted]="topic.isCompleted"
-        (toggleComplete)="toggleCompletion(topic)">
-      </app-topic-card>
-    </div>
-  </div>
-
-  <!-- Monitoring and Logging Section -->
-  <div class="topic-section">
-    <div class="section-header">
-      <div class="section-icon monitoring-icon">
-        <i class="fas fa-chart-line"></i>
-      </div>
-      <h2 class="section-title">
-        <span class="section-name">Monitoring and Logging</span>
-        <span class="topic-count">{{topicsList.slice(22, 25).length}} topics</span>
-      </h2>
-    </div>
-    <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:22:25" 
-        [topicName]="topic.topicName" 
-        [ytLink]="topic.ytLink"
-        [isCompleted]="topic.isCompleted"
-        (toggleComplete)="toggleCompletion(topic)">
-      </app-topic-card>
-    </div>
-  </div>
-
-  <!-- Cloud and Deployment Section -->
-  <div class="topic-section">
-    <div class="section-header">
-      <div class="section-icon cloud-icon">
-        <i class="fas fa-cloud"></i>
-      </div>
-      <h2 class="section-title">
-        <span class="section-name">Cloud and Deployment</span>
-        <span class="topic-count">{{topicsList.slice(25, 30).length}} topics</span>
-      </h2>
-    </div>
-    <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:25:30" 
-        [topicName]="topic.topicName" 
-        [ytLink]="topic.ytLink"
-        [isCompleted]="topic.isCompleted"
-        (toggleComplete)="toggleCompletion(topic)">
-      </app-topic-card>
-    </div>
-  </div>
-
-  <!-- Security and Best Practices Section -->
-  <div class="topic-section">
-    <div class="section-header">
-      <div class="section-icon security-icon">
-        <i class="fas fa-shield-alt"></i>
-      </div>
-      <h2 class="section-title">
-        <span class="section-name">Security and Best Practices</span>
-        <span class="topic-count">{{topicsList.slice(30, 33).length}} topics</span>
-      </h2>
-    </div>
-    <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:30:33" 
-        [topicName]="topic.topicName" 
-        [ytLink]="topic.ytLink"
-        [isCompleted]="topic.isCompleted"
-        (toggleComplete)="toggleCompletion(topic)">
-      </app-topic-card>
-    </div>
-  </div>
-</div>
-
-    </div>
-    </div>
+  
 
 <footer class="footer">
   <div class="footer-content">

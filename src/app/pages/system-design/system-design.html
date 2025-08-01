@@ -14,16 +14,14 @@
   <!-- High-Level Design Section -->
   <div class="topic-section">
     <div class="section-header">
-      <div class="section-icon hld-icon">
-        <i class="fas fa-sitemap"></i>
-      </div>
+       <i class="fas fa-sitemap"></i>
       <h2 class="section-title">
         <span class="section-name">High-Level Design (HLD)</span>
-        <span class="topic-count">{{topicsList.slice(0, 18).length}} topics</span>
+        <span class="topic-count">{{topicsList.slice(0, 16).length}} topics</span>
       </h2>
     </div>
     <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:0:18" 
+      <app-topic-card *ngFor="let topic of topicsList | slice:0:16" 
         [topicName]="topic.topicName" 
         [ytLink]="topic.ytLink"
         [isCompleted]="topic.isCompleted"
@@ -35,16 +33,14 @@
   <!-- Low-Level Design Section -->
   <div class="topic-section">
     <div class="section-header">
-      <div class="section-icon lld-icon">
-        <i class="fas fa-code"></i>
-      </div>
+      <i class="fas fa-code"></i>
       <h2 class="section-title">
         <span class="section-name">Low-Level Design (LLD)</span>
-        <span class="topic-count">{{topicsList.slice(18, topicsList.length).length}} topics</span>
+        <span class="topic-count">{{topicsList.slice(16, topicsList.length).length}} topics</span>
       </h2>
     </div>
     <div class="topics-grid">
-      <app-topic-card *ngFor="let topic of topicsList | slice:18:topicsList.length" 
+      <app-topic-card *ngFor="let topic of topicsList | slice:16:topicsList.length" 
         [topicName]="topic.topicName" 
         [ytLink]="topic.ytLink"
         [isCompleted]="topic.isCompleted"

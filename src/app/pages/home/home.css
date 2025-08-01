@@ -178,22 +178,22 @@ body {
 
 /* === Card Colors === */
 .java-card {
-  background: linear-gradient(145deg, #4a148c 10%, #880e4f 90%);
+  background: linear-gradient(145deg, #5e5864 10%, #e66eae 90%);
 }
 .dsa-card {
-  background: linear-gradient(145deg, #0d47a1, #1976d2);
+  background: linear-gradient(145deg, #62748f, #deba4e);
 }
 .web-card {
-  background: linear-gradient(145deg, #00695c, #26a69a);
+  background: linear-gradient(145deg, #556564, #5dc6bb);
 }
 .system-card {
-  background: linear-gradient(145deg, #37474f, #607d8b);
+  background: linear-gradient(145deg, #5c6367, #81ec53);
 }
 .devops-card {
-  background: linear-gradient(145deg, #ff6f00, #ff8f00);
+  background: linear-gradient(145deg, #68625e, #ed5656);
 }
 .ai-card {
-  background: linear-gradient(145deg, #311b92, #512da8);
+  background: linear-gradient(145deg, #5f5c6d, #949fed);
 }
 
 /* === Animations === */

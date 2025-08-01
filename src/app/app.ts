@@ -26,7 +26,7 @@ export class App implements OnInit {
       this.userLoggedIn=true;
       this.userName=this.user.name;
       this.userProfilePhoto=this.user.picture;
-    
+      console.log(this.user)
 
     }
   }
